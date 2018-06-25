@@ -90,6 +90,9 @@ static int modem_notifier_cb(struct notifier_block *this,
 		case SUBSYS_AFTER_POWERUP:
 			modem_is_load = 1;
 			break;
+                case SUBSYS_AFTER_SHUTDOWN:
+                        modem_is_load = 0;
+                        break;
 		default:
 			break;
 	}
